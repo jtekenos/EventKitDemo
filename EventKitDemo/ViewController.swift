@@ -109,8 +109,8 @@ class ViewController: UIViewController {
         if (eventToRemove != nil) {
             do {
                 try eventStore.removeEvent(eventToRemove!, span: .ThisEvent)
-            } catch {
-                print("Bad things happened")
+            } catch let error as NSError {
+                print("Error deleting event \(error)")
             }
         }
     }
