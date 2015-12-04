@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <scenes>
@@ -14,61 +13,52 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IbY-Ba-65O">
-                                <rect key="frame" x="133" y="37" width="334" height="127"/>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IbY-Ba-65O">
+                                <rect key="frame" x="-7" y="37" width="334" height="190"/>
                                 <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="334" id="hrc-GC-hyN"/>
-                                </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="470834386.76021898">
                                     <!--2015-12-03 11:19:46 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBE-WS-gB0">
-                                <rect key="frame" x="179" y="230" width="75" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBE-WS-gB0">
+                                <rect key="frame" x="48" y="294" width="75" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPf-fk-sRN">
-                                <rect key="frame" x="256" y="294" width="88" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Event: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvj-h9-Uyo">
+                                <rect key="frame" x="48" y="256" width="122" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kmh-Ld-vJY">
+                                <rect key="frame" x="183" y="252" width="117" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2v-WX-6fz">
+                                <rect key="frame" x="183" y="285" width="117" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPf-fk-sRN">
+                                <rect key="frame" x="116" y="364" width="88" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Create Event"/>
                                 <connections>
                                     <action selector="addEventToCalendar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YN0-mC-Nsv"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Event: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvj-h9-Uyo">
-                                <rect key="frame" x="145" y="187" width="122" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kmh-Ld-vJY">
-                                <rect key="frame" x="275" y="183" width="173" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="173" id="nyD-Tq-YGK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2v-WX-6fz">
-                                <rect key="frame" x="262" y="226" width="139" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="139" id="XBm-HP-ab1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9y-ie-QSc">
-                                <rect key="frame" x="257" y="346" width="87" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9y-ie-QSc">
+                                <rect key="frame" x="116" y="413" width="87" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Delete Event"/>
                                 <connections>
@@ -78,23 +68,6 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="o9y-ie-QSc" firstAttribute="top" secondItem="CPf-fk-sRN" secondAttribute="bottom" constant="22" id="0SJ-h2-bIm"/>
-                            <constraint firstItem="Q2v-WX-6fz" firstAttribute="top" secondItem="wvj-h9-Uyo" secondAttribute="bottom" constant="18" id="2BV-EQ-TqY"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xBE-WS-gB0" secondAttribute="bottom" constant="349" id="3Su-Ao-iSK"/>
-                            <constraint firstItem="wvj-h9-Uyo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="145" id="3kn-FD-FRh"/>
-                            <constraint firstItem="xBE-WS-gB0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="179" id="AJX-aL-00C"/>
-                            <constraint firstItem="Kmh-Ld-vJY" firstAttribute="top" secondItem="IbY-Ba-65O" secondAttribute="bottom" constant="19" id="ESl-Vn-4Ly"/>
-                            <constraint firstItem="IbY-Ba-65O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="Eyo-dj-3hk"/>
-                            <constraint firstItem="Kmh-Ld-vJY" firstAttribute="leading" secondItem="wvj-h9-Uyo" secondAttribute="trailing" constant="8" symbolic="YES" id="FTZ-Km-6cW"/>
-                            <constraint firstItem="CPf-fk-sRN" firstAttribute="top" secondItem="Q2v-WX-6fz" secondAttribute="bottom" constant="38" id="JLT-HA-O3t"/>
-                            <constraint firstItem="Q2v-WX-6fz" firstAttribute="leading" secondItem="xBE-WS-gB0" secondAttribute="trailing" constant="8" symbolic="YES" id="Qtp-Il-sq7"/>
-                            <constraint firstItem="IbY-Ba-65O" firstAttribute="centerX" secondItem="CPf-fk-sRN" secondAttribute="centerX" id="bTX-4d-t63"/>
-                            <constraint firstItem="CPf-fk-sRN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fqA-PF-dNo"/>
-                            <constraint firstItem="Q2v-WX-6fz" firstAttribute="centerY" secondItem="xBE-WS-gB0" secondAttribute="centerY" id="gw3-Wb-IHZ"/>
-                            <constraint firstItem="o9y-ie-QSc" firstAttribute="trailing" secondItem="CPf-fk-sRN" secondAttribute="trailing" id="jPa-M9-ke0"/>
-                            <constraint firstItem="Kmh-Ld-vJY" firstAttribute="centerY" secondItem="wvj-h9-Uyo" secondAttribute="centerY" id="qhO-m1-BJx"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="IbY-Ba-65O" id="Wnr-WG-0ae"/>
@@ -104,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="364" y="450"/>
+            <point key="canvasLocation" x="194" y="426"/>
         </scene>
     </scenes>
 </document>
