@@ -21,8 +21,6 @@ class ViewController: UIViewController {
     var savedEventId : String = ""
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,17 +30,6 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    /*
-    Create an instance of EKEvent store.
-    Look for permissions to edit calendar events
-    If there is no permission, request permission.
-    With permission, can: 
-        - create
-        - read
-        - delete
-    Events.
-    */
     
     //create event store
     
@@ -92,7 +79,6 @@ class ViewController: UIViewController {
     }
     
     
-    
     @IBAction func removeEvent(sender: UIButton) {
         if (EKEventStore.authorizationStatusForEntityType(.Event) != EKAuthorizationStatus.Authorized) {
             eventStore.requestAccessToEntityType(.Event, completion: { (granted, error) -> Void in
@@ -101,6 +87,8 @@ class ViewController: UIViewController {
         } else {
             deleteEvent(eventStore, eventIdentifier: savedEventId)
         }
+        lbl_eventName.text = ""
+        lbl_eventDuration.text = ""
     }
     
     //method to actually delete the event

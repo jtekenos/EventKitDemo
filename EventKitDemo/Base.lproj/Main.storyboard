@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,50 +17,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IbY-Ba-65O">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="IbY-Ba-65O">
                                 <rect key="frame" x="-7" y="37" width="334" height="190"/>
                                 <animations/>
                                 <date key="date" timeIntervalSinceReferenceDate="470834386.76021898">
                                     <!--2015-12-03 11:19:46 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBE-WS-gB0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBE-WS-gB0">
                                 <rect key="frame" x="48" y="294" width="75" height="21"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="MP6-4g-Efu"/>
+                                    <constraint firstAttribute="width" constant="75" id="Wt9-xq-s2A"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name of Event: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvj-h9-Uyo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name of Event: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wvj-h9-Uyo">
                                 <rect key="frame" x="48" y="256" width="122" height="21"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="iM1-ed-RYP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kmh-Ld-vJY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kmh-Ld-vJY">
                                 <rect key="frame" x="183" y="252" width="117" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2v-WX-6fz">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q2v-WX-6fz">
                                 <rect key="frame" x="183" y="285" width="117" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPf-fk-sRN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPf-fk-sRN">
                                 <rect key="frame" x="116" y="364" width="88" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="gpc-Nj-VpI"/>
+                                </constraints>
                                 <state key="normal" title="Create Event"/>
                                 <connections>
                                     <action selector="addEventToCalendar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YN0-mC-Nsv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9y-ie-QSc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o9y-ie-QSc">
                                 <rect key="frame" x="116" y="413" width="87" height="30"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Vbs-0L-lID"/>
+                                </constraints>
                                 <state key="normal" title="Delete Event"/>
                                 <connections>
                                     <action selector="removeEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TEG-0D-sWh"/>
@@ -68,6 +82,27 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o9y-ie-QSc" firstAttribute="top" secondItem="CPf-fk-sRN" secondAttribute="bottom" constant="19" id="49G-u9-Z2N"/>
+                            <constraint firstItem="xBE-WS-gB0" firstAttribute="top" secondItem="wvj-h9-Uyo" secondAttribute="bottom" constant="17" id="7sp-Xw-eyv"/>
+                            <constraint firstItem="wvj-h9-Uyo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="9Fm-z4-H8A"/>
+                            <constraint firstItem="IbY-Ba-65O" firstAttribute="centerX" secondItem="CPf-fk-sRN" secondAttribute="centerX" id="9e4-qL-jqz"/>
+                            <constraint firstItem="Kmh-Ld-vJY" firstAttribute="trailing" secondItem="Q2v-WX-6fz" secondAttribute="trailing" id="9sP-Of-4hd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="o9y-ie-QSc" secondAttribute="bottom" constant="125" id="EWi-78-KBi"/>
+                            <constraint firstItem="Kmh-Ld-vJY" firstAttribute="leading" secondItem="Q2v-WX-6fz" secondAttribute="leading" id="Hdh-7f-X7f"/>
+                            <constraint firstItem="Q2v-WX-6fz" firstAttribute="leading" secondItem="xBE-WS-gB0" secondAttribute="trailing" constant="60" id="IDV-V4-eOR"/>
+                            <constraint firstItem="CPf-fk-sRN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QtW-n5-cMI"/>
+                            <constraint firstItem="Q2v-WX-6fz" firstAttribute="bottom" secondItem="xBE-WS-gB0" secondAttribute="bottom" id="aK3-wV-Yyo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kmh-Ld-vJY" secondAttribute="trailing" constant="4" id="bgh-wh-0Cb"/>
+                            <constraint firstItem="Kmh-Ld-vJY" firstAttribute="top" secondItem="IbY-Ba-65O" secondAttribute="bottom" constant="25" id="cO0-bm-6Hj"/>
+                            <constraint firstItem="IbY-Ba-65O" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-23" id="hZx-gH-bfS"/>
+                            <constraint firstItem="xBE-WS-gB0" firstAttribute="leading" secondItem="wvj-h9-Uyo" secondAttribute="leading" id="iLU-am-VUl"/>
+                            <constraint firstItem="wvj-h9-Uyo" firstAttribute="centerY" secondItem="Kmh-Ld-vJY" secondAttribute="centerY" id="jEn-3t-zvZ"/>
+                            <constraint firstItem="IbY-Ba-65O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="lqT-fI-CiH"/>
+                            <constraint firstItem="Kmh-Ld-vJY" firstAttribute="leading" secondItem="wvj-h9-Uyo" secondAttribute="trailing" constant="13" id="nKG-41-exJ"/>
+                            <constraint firstItem="o9y-ie-QSc" firstAttribute="leading" secondItem="CPf-fk-sRN" secondAttribute="leading" id="vAr-nt-Dkr"/>
+                            <constraint firstItem="CPf-fk-sRN" firstAttribute="top" secondItem="xBE-WS-gB0" secondAttribute="bottom" constant="49" id="vaC-8t-1gX"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="IbY-Ba-65O" id="Wnr-WG-0ae"/>
@@ -77,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="194" y="426"/>
+            <point key="canvasLocation" x="371" y="394"/>
         </scene>
     </scenes>
 </document>
